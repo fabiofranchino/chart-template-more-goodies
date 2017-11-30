@@ -1,0 +1,15 @@
+{
+  "name": "chart-template-more-goodies",
+  "version": "1.0.0",
+  "description": "A follow up of the [proof-of-concept](http://fabiofranchino.com/blog/going-towards-reusable-d3js-charts/) to understand how to build D3.js component that play nicely to D3.js itself.",
+  "main": "template.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^4.12.0",
+    "normalize.css": "^7.0.0"
+  }
+}

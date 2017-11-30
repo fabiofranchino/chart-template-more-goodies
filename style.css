@@ -1,0 +1,20 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+svg{
+	border:1px solid red;
+}
+
+svg .background{
+	fill: #eee;
+}
+
+svg .line{
+	fill:none;
+	stroke: orange;
+	stroke-width: 3px;
+}

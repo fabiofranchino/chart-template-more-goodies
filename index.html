@@ -1,0 +1,44 @@
+<html>
+
+    <head>
+        <script src="node_modules/d3/build/d3.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="template.js"></script>
+
+    </head>
+
+    <body>
+
+        <svg width="800" height="300"></svg>
+        
+
+        <script>
+            
+            var vis = myViz()
+                .width(600).height(200)
+                .colors('red')
+                .y(d => d.val)
+                .labels({x:'one'})
+
+            var dataset1 = d3.range(10).map(d => ({val: Math.random()}))
+
+            d3.select('svg')
+                .append('g')
+                .datum(dataset1)
+                .call(vis)
+
+            var dataset2 = d3.range(5).map(d => ({val: Math.random()}))
+
+            d3.select('svg')
+                .append('g').classed('two', true).attr('transform', 'translate(600,0)')
+                .datum(dataset2)
+                .call(vis.width(200).curve(d3.curveBasis))
+
+        </script>
+
+    </body>
+
+</html>
